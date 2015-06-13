@@ -16,12 +16,12 @@ import com.google.gson.Gson;
  * Hello world!
  *
  */
-public class App 
+public class HttpClientTest 
 {
     public static void main( String[] args ) throws ClientProtocolException, IOException, ParseException
     {
         DefaultHttpClient httpClient = new DefaultHttpClient();
-        HttpGet getReq = new HttpGet("https://prointeriv-munificentissimus1.c9.io/api/aluno/233/atividades");
+        HttpGet getReq = new HttpGet("https://prointeriv-munificentissimus1.c9.io/api/alunos/233/atividades");
         getReq.addHeader("accept","application/json");
         
         HttpResponse response = httpClient.execute(getReq);
